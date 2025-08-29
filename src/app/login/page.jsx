@@ -2,7 +2,7 @@
 'use client'
 
 import { useState } from "react"
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 
 export default function LoginPage() {
@@ -12,7 +12,6 @@ export default function LoginPage() {
   const [error, setError] = useState("");
 const { login, loading, user } = useAuth();
   const router = useRouter();
-  const next = useSearchParams().get("next") || "/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
