@@ -12,6 +12,15 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      
+        async rewrites() {
+    return [
+      {
+        source: '/top',
+        destination: '/recent',
+      },
+    ]
+  },
 };
 
 export default nextConfig;
